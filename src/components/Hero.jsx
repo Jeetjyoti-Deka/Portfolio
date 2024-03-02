@@ -40,7 +40,7 @@ const Hero = () => {
                 delay: 1,
                 duration: 0.2,
               }}
-              className="w-64 h-64 absolute top-0 left-0 rounded-[8px] bg-red-500 -z-10 shadow-md"
+              className="w-32 h-32 absolute top-0 left-0 rounded-[4px] bg-red-500 -z-10 shadow-md"
             ></motion.div>
             <motion.img
               initial={{
@@ -58,6 +58,23 @@ const Hero = () => {
               alt="my img"
               className="w-full h-full object-cover rounded-[8px]"
             />
+            <motion.div
+              initial={{
+                x: 0,
+                y: 0,
+                opacity: 0,
+              }}
+              animate={{
+                x: 10,
+                y: 10,
+                opacity: 1,
+              }}
+              transition={{
+                delay: 1,
+                duration: 0.2,
+              }}
+              className="w-32 h-32 absolute bottom-0 right-0 rounded-[4px] bg-blue-500 -z-10 shadow-md"
+            ></motion.div>
           </div>
         </div>
 
