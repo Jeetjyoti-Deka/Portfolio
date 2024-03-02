@@ -12,3 +12,15 @@ export const NAV_LINKS = [
     route: "#skills",
   },
 ];
+
+export const SKILLS = [
+  "React",
+  "TypeScript",
+  "Next.js",
+  "Node",
+  "Express",
+  "HTML",
+  "CSS",
+  "React Native",
+  "Golang",
+];
