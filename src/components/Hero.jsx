@@ -29,16 +29,31 @@ const Hero = () => {
               initial={{
                 x: 0,
                 y: 0,
-                opacity: 0.6,
+                opacity: 0,
               }}
               animate={{
                 x: -10,
                 y: -10,
                 opacity: 1,
               }}
+              transition={{
+                delay: 1,
+                duration: 0.2,
+              }}
               className="w-64 h-64 absolute top-0 left-0 rounded-[8px] bg-red-500 -z-10 shadow-md"
             ></motion.div>
-            <img
+            <motion.img
+              initial={{
+                scale: 0.3,
+                opacity: 0.5,
+              }}
+              animate={{
+                scale: 1,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.4,
+              }}
               src="src/assets/Profile_img.jpg"
               alt="my img"
               className="w-full h-full object-cover rounded-[8px]"
@@ -52,6 +67,9 @@ const Hero = () => {
               variants={container}
               initial="hidden"
               animate="visible"
+              transition={{
+                delay: 0.4,
+              }}
               className="text-7xl text-red-500 mb-4 poppins-semibold"
             >
               {"Hello!".split("").map((c, i) => (
