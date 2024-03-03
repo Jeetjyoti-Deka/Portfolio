@@ -16,6 +16,18 @@ const container = {
   },
 };
 
+const status_container = {
+  hidden: { opacity: 0, scale: 1 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 1,
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 const Skills = () => {
   const [active, setActive] = useState("React");
   const ref = useRef(null);
@@ -82,23 +94,32 @@ const Skills = () => {
           >
             <motion.h2
               key={active}
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{
-                delay: 0.6,
+                delay: 0.8,
               }}
               className="poppins-medium text-lg"
             >
               {active}
             </motion.h2>
-
-            {SKILLS.filter((skill) => skill.name === active).map((skill, i) => (
-              <React.Fragment key={i}>
-                <Status title={"Knowledge"} value={skill.knowledge} />
-                <Status title={"Experience"} value={skill.experience} />
-                <Status title={"Creativity"} value={skill.creativity} />
-              </React.Fragment>
-            ))}
+            <motion.div
+              key={active}
+              variants={status_container}
+              initial="hidden"
+              animate="visible"
+              className="flex w-full flex-col items-center gap-y-4"
+            >
+              {SKILLS.filter((skill) => skill.name === active).map(
+                (skill, i) => (
+                  <React.Fragment key={i}>
+                    <Status title={"Knowledge"} value={skill.knowledge} />
+                    <Status title={"Experience"} value={skill.experience} />
+                    <Status title={"Creativity"} value={skill.creativity} />
+                  </React.Fragment>
+                )
+              )}
+            </motion.div>
           </motion.div>
         </AnimatePresence>
       </motion.div>

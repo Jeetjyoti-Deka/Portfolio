@@ -19,7 +19,7 @@ const Project = ({ project }) => {
         scale: scaleProgress,
       }}
       ref={ref}
-      className="flex gap-x-6 items-start justify-center py-4 px-6 rounded-[4px] my-10 hover:bg-slate-100 transition-colors relative"
+      className="flex gap-x-6 items-start justify-center py-4 px-6 rounded-[4px] my-10 relative"
     >
       <div className="w-[450px] relative">
         <motion.div
