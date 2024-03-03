@@ -11,6 +11,10 @@ export const NAV_LINKS = [
     label: "Skills",
     route: "#skills",
   },
+  {
+    label: "Projects",
+    route: "#projects",
+  },
 ];
 
 export const SKILLS = [

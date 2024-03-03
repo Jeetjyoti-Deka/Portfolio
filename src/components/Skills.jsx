@@ -29,7 +29,7 @@ const Skills = () => {
     <div
       ref={ref}
       id="skills"
-      className="flex flex-col items-center overflow-y-hidden"
+      className="flex flex-col items-center overflow-y-hidden py-4 scroll-mt-96"
     >
       <motion.h1
         initial={{
@@ -44,7 +44,7 @@ const Skills = () => {
           delay: 0.4,
           duration: 0.4,
         }}
-        className="text-3xl font-semibold text-slate-800 mb-6"
+        className="text-3xl poppins-semibold text-slate-800 mb-6 "
       >
         My Skills
       </motion.h1>
@@ -57,7 +57,10 @@ const Skills = () => {
         {SKILLS.map((skill, i) => (
           <motion.p
             variants={item}
-            className="bg-slate-200 mx-2 px-4 py-2 rounded-full cursor-pointer hover:text-white hover:bg-slate-700 transition-colors"
+            whileHover={{
+              scale: 1.1,
+            }}
+            className="bg-slate-200 poppins-medium mx-2 px-4 py-2 rounded-full cursor-pointer hover:text-white hover:bg-slate-700 transition-colors"
             key={i}
           >
             {skill}
