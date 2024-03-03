@@ -1,3 +1,4 @@
+import { PROJECTS } from "../lib/constants";
 import Project from "./Project";
 
 const Projects = () => {
@@ -6,11 +7,9 @@ const Projects = () => {
       <h2 className="text-3xl poppins-semibold text-slate-800  text-center">
         Projects
       </h2>
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
+      {PROJECTS.map((project, i) => (
+        <Project project={project} key={i} />
+      ))}
     </div>
   );
 };

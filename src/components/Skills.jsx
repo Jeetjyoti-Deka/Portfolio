@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { SKILLS } from "../lib/constants";
 import { useInView, motion } from "framer-motion";
+import Badge from "./Badge";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -11,14 +12,6 @@ const container = {
       delayChildren: 0.3,
       staggerChildren: 0.2,
     },
-  },
-};
-
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
   },
 };
 
@@ -55,16 +48,7 @@ const Skills = () => {
         className="flex items-center justify-center flex-wrap gap-y-4 px-4"
       >
         {SKILLS.map((skill, i) => (
-          <motion.p
-            variants={item}
-            whileHover={{
-              scale: 1.1,
-            }}
-            className="bg-slate-200 poppins-medium mx-2 px-4 py-2 rounded-full cursor-pointer hover:text-white hover:bg-slate-700 transition-colors"
-            key={i}
-          >
-            {skill}
-          </motion.p>
+          <Badge value={skill} key={i} />
         ))}
       </motion.div>
     </div>
