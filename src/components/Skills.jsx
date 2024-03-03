@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { SKILLS } from "../lib/constants";
-import { useInView, motion } from "framer-motion";
+import { useInView, motion, AnimatePresence } from "framer-motion";
 import Skill from "./Skill";
 import Status from "./Status";
 
@@ -62,17 +62,45 @@ const Skills = () => {
         })}
       </motion.div>
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="relative bg-slate-200 w-[700px] rounded-[8px] my-10 h-96 flex flex-col items-center gap-y-4"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 10 }}
+        transition={{
+          delay: 1,
+          type: "spring",
+          stiffness: 100,
+          duration: 0.6,
+        }}
+        // className="relative bg-slate-200 w-[300px] xs:w-[400px] sm:w-[500px] md:w-[700px] rounded-[8px] my-10 h-96 flex flex-col items-center gap-y-4 py-4"
       >
-        {SKILLS.filter((skill) => skill.name === active).map((skill, i) => (
-          <React.Fragment key={i}>
-            <Status title={"Knowledge"} value={skill.knowledge} />
-            <Status title={"Experience"} value={skill.experience} />
-            <Status title={"Creativity"} value={skill.creativity} />
-          </React.Fragment>
-        ))}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, x: 50, transition: { delay: 0.5 } }}
+            animate={{ opacity: 1, x: 0, transition: { delay: 0.5 } }}
+            exit={{ x: 50, opacity: 0, transition: { duration: 0.3 } }}
+            className="relative bg-slate-200 w-[300px] xs:w-[400px] sm:w-[500px] md:w-[700px] rounded-[8px] my-10 h-96 flex flex-col items-center gap-y-4 py-4"
+          >
+            <motion.h2
+              key={active}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{
+                delay: 0.6,
+              }}
+              className="poppins-medium text-lg"
+            >
+              {active}
+            </motion.h2>
+
+            {SKILLS.filter((skill) => skill.name === active).map((skill, i) => (
+              <React.Fragment key={i}>
+                <Status title={"Knowledge"} value={skill.knowledge} />
+                <Status title={"Experience"} value={skill.experience} />
+                <Status title={"Creativity"} value={skill.creativity} />
+              </React.Fragment>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </motion.div>
     </div>
   );
