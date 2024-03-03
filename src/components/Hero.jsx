@@ -21,7 +21,10 @@ const item = {
 
 const Hero = () => {
   return (
-    <div id="home" className="flex items-center justify-center w-full h-[85vh]">
+    <div
+      id="home"
+      className="flex items-center justify-center w-full h-[100vh]"
+    >
       <div className="flex items-center gap-x-10 ml-52">
         <div className="flex items-center justify-center">
           <div className="group w-64 h-64  rounded-[8px] relative z-10">

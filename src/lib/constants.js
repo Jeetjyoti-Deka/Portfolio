@@ -14,15 +14,60 @@ export const NAV_LINKS = [
 ];
 
 export const SKILLS = [
-  "React",
-  "TypeScript",
-  "Next.js",
-  "Node",
-  "Express",
-  "HTML",
-  "CSS",
-  "React Native",
-  "Golang",
+  {
+    name: "React",
+    knowledge: 80,
+    experience: 84,
+    creativity: 70,
+  },
+  {
+    name: "TypeScript",
+    knowledge: 60,
+    experience: 50,
+    creativity: 64,
+  },
+  {
+    name: "Next.js",
+    knowledge: 70,
+    experience: 73,
+    creativity: 70,
+  },
+  {
+    name: "Node",
+    knowledge: 80,
+    experience: 90,
+    creativity: 74,
+  },
+  {
+    name: "Express",
+    knowledge: 80,
+    experience: 75,
+    creativity: 64,
+  },
+  {
+    name: "HTML",
+    knowledge: 90,
+    experience: 84,
+    creativity: 80,
+  },
+  {
+    name: "CSS",
+    knowledge: 80,
+    experience: 84,
+    creativity: 75,
+  },
+  {
+    name: "React Native",
+    knowledge: 50,
+    experience: 40,
+    creativity: 35,
+  },
+  {
+    name: "Golang",
+    knowledge: 65,
+    experience: 50,
+    creativity: 65,
+  },
 ];
 
 export const PROJECTS = [

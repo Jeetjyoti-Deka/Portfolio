@@ -11,7 +11,7 @@ const Project = ({ project }) => {
     offset: ["0 1", "0.9 1"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.4, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
   return (
     <motion.div
       style={{
