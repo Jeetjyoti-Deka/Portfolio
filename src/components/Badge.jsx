@@ -16,7 +16,7 @@ const Badge = ({ value, isActive = false }) => {
       whileHover={{
         scale: 1.1,
       }}
-      className={`bg-slate-200 poppins-medium mx-2 px-4 py-2 rounded-full cursor-pointer hover:text-white hover:bg-slate-700 transition-colors ${
+      className={`bg-slate-200 poppins-medium mx-2 px-4 py-2 rounded-full cursor-pointer hover:text-white hover:bg-slate-700 transition-colors whitespace-nowrap ${
         isActive && "text-white bg-slate-700"
       }`}
       onClick={() => {

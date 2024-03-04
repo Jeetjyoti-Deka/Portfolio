@@ -25,9 +25,9 @@ const Hero = () => {
       id="home"
       className="flex items-center justify-center w-full h-[100vh]"
     >
-      <div className="flex items-center gap-x-10 ml-52">
+      <div className="flex flex-col lg:flex-row items-center gap-x-10 sm:mt-32 lg:mt-0 lg:ml-52">
         <div className="flex items-center justify-center">
-          <div className="group w-64 h-64  rounded-[8px] relative z-10">
+          <div className="group w-40 sm:w-64 h-40 sm:h-64 mb-10 lg:mb-0 rounded-[8px] relative z-10">
             <motion.div
               initial={{
                 x: 0,
@@ -43,7 +43,7 @@ const Hero = () => {
                 delay: 1,
                 duration: 0.2,
               }}
-              className="w-32 h-32 absolute top-0 left-0 rounded-[4px] bg-red-500 -z-10 shadow-md"
+              className="w-16 sm:w-32 h-16 sm:h-32 absolute top-0 left-0 rounded-[4px] bg-red-500 -z-10 shadow-lg"
             ></motion.div>
             <motion.img
               initial={{
@@ -76,7 +76,7 @@ const Hero = () => {
                 delay: 1,
                 duration: 0.2,
               }}
-              className="w-32 h-32 absolute bottom-0 right-0 rounded-[4px] bg-blue-500 -z-10 shadow-md"
+              className="w-16 sm:w-32 h-16 sm:h-32 absolute bottom-0 right-0 rounded-[4px] bg-blue-500 -z-10 shadow-lg"
             ></motion.div>
           </div>
         </div>
@@ -90,7 +90,7 @@ const Hero = () => {
               transition={{
                 delay: 0.4,
               }}
-              className="text-7xl text-red-500 mb-4 poppins-semibold"
+              className="text-5xl sm:text-7xl text-center lg:text-left text-red-500 mb-4 poppins-semibold"
             >
               {"Hello!".split("").map((c, i) => (
                 <motion.span variants={item} key={i}>
@@ -102,7 +102,7 @@ const Hero = () => {
               variants={container}
               initial="hidden"
               animate="visible"
-              className="text-4xl text-slate-600 poppins-semibold tracking-wider leading-[49px]"
+              className="text-xl sm:text-4xl text-center lg:text-left text-slate-600 poppins-semibold sm:tracking-wider sm:leading-[49px]"
             >
               {"I'm Jeetjyoti,".split(" ").map((c, i) => (
                 <motion.span className="mx-1" variants={item} key={i}>

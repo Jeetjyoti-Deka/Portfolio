@@ -19,9 +19,9 @@ const Project = ({ project }) => {
         scale: scaleProgress,
       }}
       ref={ref}
-      className="flex gap-x-6 items-start justify-center py-4 px-6 rounded-[4px] my-10 relative"
+      className="flex flex-col lg:flex-row gap-x-6 items-center lg:items-start justify-center py-4 px-6 rounded-[4px] lg:my-10 relative"
     >
-      <div className="w-[450px] relative">
+      <div className="w-[290px] sm:w-[350px] md:w-[450px] relative mb-6 lg:mb-0">
         <motion.div
           initial={{
             x: 0,
@@ -62,9 +62,11 @@ const Project = ({ project }) => {
           className="w-32 h-32 absolute bottom-0 right-0 rounded-[4px] bg-blue-500 -z-10 shadow-md"
         ></motion.div>
       </div>
-      <div className="">
-        <h2 className="poppins-semibold text-2xl mt-2">{project?.name}</h2>
-        <p className="poppins-regular w-[550px] mt-4 tracking-wide flex items-center justify-start flex-wrap gap-y-2">
+      <div className="flex flex-col items-center lg:items-start">
+        <h2 className="poppins-semibold text-lg sm:text-2xl mt-2">
+          {project?.name}
+        </h2>
+        <p className="poppins-regular md:w-[550px] mt-4 tracking-wide flex items-center justify-center lg:justify-start flex-wrap gap-y-2">
           <p className="poppins-medium text-xl">Tech Stack</p>:
           {project?.tech_stack?.map((item, i) => (
             <Badge value={item} key={i} />
