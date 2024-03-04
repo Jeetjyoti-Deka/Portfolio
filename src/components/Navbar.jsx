@@ -1,5 +1,6 @@
 import { NAV_LINKS } from "../lib/constants";
 import { motion } from "framer-motion";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   return (
@@ -30,13 +31,7 @@ const Navbar = () => {
           </a>
         ))}
       </div>
-      <div className="sm:hidden block w-6 h-6">
-        <img
-          src="src/assets/menu.svg"
-          alt="menu"
-          className="w-full h-full object-contain"
-        />
-      </div>
+      <MobileNav />
     </motion.nav>
   );
 };

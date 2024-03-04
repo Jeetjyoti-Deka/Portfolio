@@ -63,7 +63,7 @@ const Project = ({ project }) => {
         ></motion.div>
       </div>
       <div className="flex flex-col items-center lg:items-start">
-        <h2 className="poppins-semibold text-lg sm:text-2xl mt-2">
+        <h2 className="poppins-semibold text-lg text-center sm:text-2xl px-2 mt-2">
           {project?.name}
         </h2>
         <p className="poppins-regular md:w-[550px] mt-4 tracking-wide flex items-center justify-center lg:justify-start flex-wrap gap-y-2">
