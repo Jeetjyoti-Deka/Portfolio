@@ -130,7 +130,7 @@ export const PROJECTS = [
 ];
 export const FOOTER_LINKS = [
   {
-    img: "./src/assets/linkedin.svg",
+    img: "../assets/linkedin.svg",
     href: "https://www.linkedin.com/in/jeetjyoti-deka-7848b2247/",
   },
   {
