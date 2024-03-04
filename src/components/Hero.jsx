@@ -57,7 +57,7 @@ const Hero = () => {
               transition={{
                 duration: 0.4,
               }}
-              src="src/assets/Profile_img.jpg"
+              src="../../src/assets/Profile_img.jpg"
               alt="my img"
               className="w-full h-full object-cover rounded-[8px]"
             />
