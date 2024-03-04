@@ -62,10 +62,10 @@ const Project = ({ project }) => {
           className="w-32 h-32 absolute bottom-0 right-0 rounded-[4px] bg-blue-500 -z-10 shadow-md"
         ></motion.div>
       </div>
-      <div>
+      <div className="">
         <h2 className="poppins-semibold text-2xl mt-2">{project?.name}</h2>
-        <p className="poppins-regular max-w-[550px] mt-4 tracking-wide flex items-center justify-start flex-wrap gap-y-2">
-          <span className="poppins-medium text-xl">Tech Stack</span>:
+        <p className="poppins-regular w-[550px] mt-4 tracking-wide flex items-center justify-start flex-wrap gap-y-2">
+          <p className="poppins-medium text-xl">Tech Stack</p>:
           {project?.tech_stack?.map((item, i) => (
             <Badge value={item} key={i} />
           ))}

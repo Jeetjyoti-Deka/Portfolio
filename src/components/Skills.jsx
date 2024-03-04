@@ -22,7 +22,7 @@ const status_container = {
     opacity: 1,
     scale: 1,
     transition: {
-      delayChildren: 1,
+      delayChildren: 1.1,
       staggerChildren: 0.2,
     },
   },
@@ -36,7 +36,7 @@ const Skills = () => {
     <div
       ref={ref}
       id="skills"
-      className="flex flex-col items-center py-4 scroll-m-28"
+      className="flex flex-col items-center py-4 mb-40 scroll-m-28"
     >
       <motion.h1
         initial={{
@@ -84,44 +84,57 @@ const Skills = () => {
         }}
         // className="relative bg-slate-200 w-[300px] xs:w-[400px] sm:w-[500px] md:w-[700px] rounded-[8px] my-10 h-96 flex flex-col items-center gap-y-4 py-4"
       >
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, x: 50, transition: { delay: 0.5 } }}
-            animate={{ opacity: 1, x: 0, transition: { delay: 0.5 } }}
-            exit={{ x: 50, opacity: 0, transition: { duration: 0.3 } }}
-            className="relative bg-slate-200 w-[300px] xs:w-[400px] sm:w-[500px] md:w-[700px] rounded-[8px] my-10 h-96 flex flex-col items-center gap-y-4 py-4"
-          >
-            <motion.h2
-              key={active}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.8,
-              }}
-              className="poppins-medium text-lg"
-            >
-              {active}
-            </motion.h2>
+        <div className="h-96">
+          <AnimatePresence mode="wait">
             <motion.div
               key={active}
-              variants={status_container}
-              initial="hidden"
-              animate="visible"
-              className="flex w-full flex-col items-center gap-y-4"
+              initial={{ opacity: 0, x: 50, transition: { delay: 0.5 } }}
+              animate={{ opacity: 1, x: 0, transition: { delay: 0.5 } }}
+              exit={{ x: 50, opacity: 0, transition: { duration: 0.3 } }}
+              className="relative bg-slate-200 w-[300px] xs:w-[400px] sm:w-[600px] md:w-[700px] rounded-[8px] my-10 flex flex-col items-center gap-y-4 pt-4 pb-8"
             >
-              {SKILLS.filter((skill) => skill.name === active).map(
-                (skill, i) => (
-                  <React.Fragment key={i}>
-                    <Status title={"Knowledge"} value={skill.knowledge} />
-                    <Status title={"Experience"} value={skill.experience} />
-                    <Status title={"Creativity"} value={skill.creativity} />
-                  </React.Fragment>
-                )
-              )}
+              <motion.h2
+                key={active}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.8,
+                }}
+                className="poppins-medium text-lg"
+              >
+                {active}
+              </motion.h2>
+              <motion.p
+                key={active}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 1,
+                }}
+                className="px-4 sm:px-6 poppins-regular text-center"
+              >
+                {SKILLS.filter((skill) => skill.name == active)[0].description}
+              </motion.p>
+              <motion.div
+                key={active}
+                variants={status_container}
+                initial="hidden"
+                animate="visible"
+                className="flex w-full flex-col items-center gap-y-4"
+              >
+                {SKILLS.filter((skill) => skill.name === active).map(
+                  (skill, i) => (
+                    <React.Fragment key={i}>
+                      <Status title={"Knowledge"} value={skill.knowledge} />
+                      <Status title={"Experience"} value={skill.experience} />
+                      <Status title={"Creativity"} value={skill.creativity} />
+                    </React.Fragment>
+                  )
+                )}
+              </motion.div>
             </motion.div>
-          </motion.div>
-        </AnimatePresence>
+          </AnimatePresence>
+        </div>
       </motion.div>
     </div>
   );
