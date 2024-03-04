@@ -84,7 +84,7 @@ const Project = ({ project }) => {
           Live Website
           <div className="w-4">
             <img
-              src="src/assets/link_arrow.svg"
+              src="/link_arrow.svg"
               alt="arrow"
               className="object-contain invert"
             />

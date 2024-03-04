@@ -101,31 +101,31 @@ export const PROJECTS = [
       "Zustand(State Management)",
     ],
     live_link: "https://swift-cart-mu.vercel.app/",
-    img: "src/assets/project01.png",
+    img: "/project01.png",
   },
   {
     name: "TaskFlow - Task Management App",
     tech_stack: ["TypeScript", "Next.js", "IndexDB", "Tailwind"],
     live_link: "https://todo-app-jeetjyoti-deka.vercel.app/",
-    img: "src/assets/project02.png",
+    img: "/project02.png",
   },
   {
     name: "Payouts - Frontend Screen",
     tech_stack: ["TypeScript", "Next.js", "Tailwind"],
     live_link: "https://payouts-submission.vercel.app/",
-    img: "src/assets/project03.png",
+    img: "/project03.png",
   },
   {
     name: "Expense Tracker - Frontend Screen",
     tech_stack: ["TypeScript", "React", "Tailwind"],
     live_link: "https://expense-tracker-ashy-six.vercel.app/",
-    img: "src/assets/project04.png",
+    img: "/project04.png",
   },
   {
     name: "TastyBites - Restaurant Landing Page",
     tech_stack: ["TypeScript", "Next", "Tailwind"],
     live_link: "https://tasty-bites-six.vercel.app/",
-    img: "src/assets/project05.png",
+    img: "/project05.png",
   },
 ];
 export const FOOTER_LINKS = [
@@ -134,12 +134,12 @@ export const FOOTER_LINKS = [
     href: "https://www.linkedin.com/in/jeetjyoti-deka-7848b2247/",
   },
   {
-    img: "./src/assets/twitter.svg",
+    img: "/twitter.svg",
     href: "https://twitter.com/deka_jeetjyoti",
   },
 
   {
-    img: "./src/assets/gmail.svg",
+    img: "/gmail.svg",
     href: "mailto:jeetjyotiwork@gmail.com",
   },
 ];

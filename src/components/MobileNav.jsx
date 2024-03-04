@@ -7,7 +7,7 @@ const MobileNav = () => {
       <SheetTrigger asChild>
         <div className="sm:hidden block w-6 h-6">
           <img
-            src="src/assets/menu.svg"
+            src="/menu.svg"
             alt="menu"
             className="w-full h-full object-contain"
           />
