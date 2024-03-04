@@ -22,7 +22,7 @@ const ScrollDown = () => {
         className="w-10 h-10"
       >
         <img
-          src="/public/chevrolet-down.svg"
+          src="public/chevrolet-down.svg"
           alt="arrow down"
           className="object-contain"
         />
