@@ -128,3 +128,19 @@ export const PROJECTS = [
     img: "src/assets/project05.png",
   },
 ];
+
+export const FOOTER_LINKS = [
+  {
+    img: "/src/assets/linkedin.svg",
+    href: "https://www.linkedin.com/in/jeetjyoti-deka-7848b2247/",
+  },
+  {
+    img: "/src/assets/twitter.svg",
+    href: "https://twitter.com/deka_jeetjyoti",
+  },
+
+  {
+    img: "/src/assets/gmail.svg",
+    href: "mailto:jeetjyotiwork@gmail.com",
+  },
+];
