@@ -36,7 +36,7 @@ const Skills = () => {
     <div
       ref={ref}
       id="skills"
-      className="flex flex-col items-center py-4 mb-40 scroll-m-28"
+      className="flex flex-col items-center py-4 mb-20 lg:mb-40 scroll-m-28"
     >
       <motion.h1
         initial={{
@@ -84,7 +84,7 @@ const Skills = () => {
         }}
         // className="relative bg-slate-200 w-[300px] xs:w-[400px] sm:w-[500px] md:w-[700px] rounded-[8px] my-10 h-96 flex flex-col items-center gap-y-4 py-4"
       >
-        <div className="h-96">
+        <div className="min-h-96">
           <AnimatePresence mode="wait">
             <motion.div
               key={active}
