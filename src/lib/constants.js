@@ -91,6 +91,21 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
+    name: "BookCase - Book renting website.",
+    tech_stack: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind",
+      "Kinde(Auth)",
+      "Stripe(Payment)",
+      "Redux Toolkit(State Management)",
+      "ShadcnUI",
+      "Framer Motion",
+    ],
+    live_link: "https://bookcase-olive.vercel.app",
+    img: "/project05.png",
+  },
+  {
     name: "SwiftCart - Ecommerce Website",
     tech_stack: [
       "TypeScript",
@@ -100,7 +115,7 @@ export const PROJECTS = [
       "Stripe(Payment)",
       "Zustand(State Management)",
     ],
-    live_link: "https://swift-cart-mu.vercel.app/",
+    live_link: "https://swift-cart-mu.vercel.app",
     img: "/project01.png",
   },
   {
@@ -120,12 +135,6 @@ export const PROJECTS = [
     tech_stack: ["TypeScript", "React", "Tailwind"],
     live_link: "https://expense-tracker-ashy-six.vercel.app/",
     img: "/project04.png",
-  },
-  {
-    name: "TastyBites - Restaurant Landing Page",
-    tech_stack: ["TypeScript", "Next", "Tailwind"],
-    live_link: "https://tasty-bites-six.vercel.app/",
-    img: "/project05.png",
   },
 ];
 export const FOOTER_LINKS = [
